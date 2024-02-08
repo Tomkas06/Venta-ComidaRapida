@@ -1,0 +1,41 @@
+/*                  Navbar                   */
+.barra-navegacion{
+    border-bottom: 1px solid black;
+}
+
+.imagen-logo{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-collapse{
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*                  ViewPort                 */
+
+@media screen and (max-width: 991px) {
+    .navbar-brand img{
+        display: none;
+    }
+}
+
+
+/*
+.imagen-logo img{
+    width: 15vw;
+    height: auto;
+}
+
+<a class="navbar-brand" href="#"><img src="/img/Logo/Logo hamburgesa con nombre.png" alt="Logo hamburgesa con nombre"></a>
+
+*/
