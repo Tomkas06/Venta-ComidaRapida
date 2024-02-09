@@ -3,17 +3,11 @@
     border-bottom: 1px solid black;
 }
 
-.imagen-logo{
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.imagen-logo img{
-    width: 100%;
-    height: 100%;
+nav{
+    background-image: url(/img/Logo/Logo-nombreAcortado.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .navbar-collapse{
@@ -21,21 +15,37 @@
     align-items: center;
 }
 
+.nav-link{
+    color: #d7b03e;
+}
+
+/*                  Carrousel                 */
+.carousel-padre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.carousel{
+    max-width: 800px;
+}
+
+.carousel-item{
+    height: 500px;
+}
+
+
 /*                  ViewPort                 */
 
 @media screen and (max-width: 991px) {
-    .navbar-brand img{
+    .navbar-collapse img{
         display: none;
     }
 }
 
-
-/*
-.imagen-logo img{
-    width: 15vw;
-    height: auto;
+@media screen and (max-width: 480px){
+    nav{
+        background-image: none;
+    }
 }
-
-<a class="navbar-brand" href="#"><img src="/img/Logo/Logo hamburgesa con nombre.png" alt="Logo hamburgesa con nombre"></a>
-
-*/
