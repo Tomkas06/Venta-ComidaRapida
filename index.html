@@ -11,14 +11,14 @@
 <body>
     <header>
         <div class="barra-navegacion">
-          <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbarUp">
             <div class="container-fluid">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbar">
-                <a href="#"><img src="/img/icons/Logo-hamburgesa.svg" alt="Logo hamburgesa con nombre" width="50"></a>
-                <h1><img src="/img/Logo/Logo-nombreAcortado.png" alt="Logo compañia"></h1>                
+                <a href="#"><img src="/img/icons/Logo-hamburgesa.svg" alt="Logo hamburgesa con nombre" width="50" class="logo-compania"></a>
+                <h1><img src="/img/Logo/Logo-nombreAcortado.png" alt="Logo compañia" class="logo-compania"></h1>                
                 <ul class="navbar-nav d-flex justify-content-center">
                   <li class="nav-item">
                     <a class="nav-link"href="#">Inicio</a>
@@ -35,6 +35,15 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">Lomos</a>
                   </li>
+                  <li class="nav-item">
+                    <button type="button" class="btn position-relative">
+                      <img src="/img/icons/cart-regular-24.png" alt="Carro de compras">
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        <span class="visually-hidden">Unidades en el carro</span>
+                        0
+                      </span>
+                    </button>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -47,7 +56,6 @@
         ↑
     </button>
     </aside>
-
     <main>
       <section id="promociones">
         <div class="carousel-padre">
@@ -76,10 +84,9 @@
       </section>
 
       <section id="hamburgesas">
-
         <div class="cartel"> 
-          <h2>Hamburgesas</h2>
-          <img src="/img/hamburgesas/HamburgesaPrueba.png" alt=""Hamburgesa>
+          <h2>Hamburguesas</h2>
+          <img src="/img/hamburgesas/HamburgesaPrueba.png" alt="Hamburgesa">
         </div>
 
         <div class="background">
