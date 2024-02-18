@@ -13,7 +13,7 @@ body{
 }
 
 /*                  Ir arriba                   */
-#scrollToTopButton {
+.ir-arriba {
         display: none;
         position: fixed;
         bottom: 20px;
@@ -31,11 +31,15 @@ body{
         cursor: pointer;
 }
 
-#scrollToTopButton svg {
+.ir-arriba svg {
     fill: #007bff; /* Cambia el color de relleno del SVG */
 }
   
 /*                  Navbar                   */
+.inicio{
+    display: none;
+}
+
 .barra-navegacion{
     border-bottom: 1px solid black;
 }
@@ -82,6 +86,10 @@ body{
 /*                  ViewPort                 */
 
 @media screen and (max-width: 991px) {
+    .inicio{
+        display: block;
+    }
+
     .logo-compania{
         display: none;
     }
@@ -169,6 +177,22 @@ body{
     background-color: black;
 }
 
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price .eliminar{
+    background-color: var(--burger);
+}
+
+.send{
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .agrandado{
     background-image: url(/img/backgnd/fireGif.gif);
     background-position: center;
@@ -178,6 +202,11 @@ body{
     animation-duration: 1s;
 }
 
+.agrandado h3{
+    animation-name: anim-cards;
+    animation-duration: 3s;
+}
+
 .achicado{
     animation-name: achicar;
     animation-duration: 1s;
@@ -185,6 +214,8 @@ body{
     transform: scale(0.1);
 }
 
+
+/*               Animaciones                    */
 @keyframes agrandar{
     from{
         transform: scale(0.1);
@@ -202,5 +233,18 @@ body{
 
     to{
         transform: scale(0.1);
+    }
+}
+
+
+@keyframes anim-cards{
+    0%{
+        transform: translate(-100px);
+    }
+
+    
+
+    100%{
+        transform: translate(0);
     }
 }
