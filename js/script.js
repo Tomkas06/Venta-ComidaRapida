@@ -21,7 +21,7 @@ window.onscroll = function() {
 ///Funcion agrandar cards
 const cards = document.querySelectorAll('.card');
 
-        const observer = new IntersectionObserver(entries => {
+        const observerCard = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('agrandado'); // Agregar clase de sombra cuando está en la vista
@@ -37,36 +37,28 @@ const cards = document.querySelectorAll('.card');
         }, { threshold: 0.5 });
 
         cards.forEach(card => {
-            observer.observe(card);
+            observerCard.observe(card);
         });
 
+///Funcion girar cartel
 
-///Funcion para sumar o restar
+const cartel = document.querySelectorAll('.nombre-cartel');
 
-const restar = document.getElementById('restar');
-const reinicio = document.getElementById('reinicio');
-const sumar = document.getElementById('sumar');
-const cantidad = document.getElementById('cantidad');
+        const observerCartel = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('girado'); // Agregar clase de sombra cuando está en la vista
+                    //entry.target.classList.remove('achicado'); // Quitar clase de sombra cuando sale de la vista
+                } 
+                /*
+                else {
+                    entry.target.classList.add('achicado'); // Agregar clase de sombra cuando está en la vista
+                    entry.target.classList.remove('agrandado'); // Quitar clase de sombra cuando sale de la vista
+                }
+                */
+            });
+        }, { threshold: 0.5 });
 
-let cantidades = 0;
-
-restar.addEventListener('click', () => {
-  if(cantidades > 0){
-    cantidades = cantidades - 1;
-
-    cantidad.innerText = cantidades;
-  }
-});
-sumar.addEventListener('click', () => {
-  if(cantidades < 20){
-    cantidades = cantidades + 1;
-    cantidad.innerText = cantidades;
-  }else{
-    cantidades = 0;
-  }
-});
-
-reinicio.addEventListener('click', () => {
-  cantidades = 0;
-  cantidad.innerText = cantidades;
-});
+        cartel.forEach(card => {
+            observerCartel.observe(card);
+        });
