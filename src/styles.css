@@ -268,16 +268,16 @@ footer {
     filter: drop-shadow(0 0 7px #d7b03e);
   }
   
-  footer.bottom {
+footer.bottom {
     padding: 20px 0;
     justify-content: space-between;
-  }
-  
-  footer.top .links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
+}
+
+div.links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
   .links > div {
     display: grid;
