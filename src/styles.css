@@ -1,87 +1,94 @@
 /*                  Principales                   */
 :root {
-    --primary: #DD946F ;
+    --primary: #DD946F;
     --secondary: #261E5A;
     --burger: #d7b03e;
 }
 
-body{
-    background: linear-gradient(
-        to bottom right,
-        #45C270, #21CDC3
-    );
+body {
+    width: 100%;
+    height: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
+
 }
 
 /*                  Ir arriba                   */
 .ir-arriba {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        background-color: var(--burger);
-        color: #fff;
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        line-height: 40px;
-        text-align: center;
-        cursor: pointer;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--burger);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .ir-arriba svg {
-    fill: #007bff; /* Cambia el color de relleno del SVG */
+    fill: #007bff;
+    /* Cambia el color de relleno del SVG */
 }
-  
+
 /*                  Navbar                   */
-.inicio{
+.inicio {
     display: none;
 }
 
-.barra-navegacion{
+.barra-navegacion {
     border-bottom: 1px solid black;
 }
 
-.navbar-collapse{
+.navbar-collapse {
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-link{
+.nav-link {
     color: var(--burger);
 }
 
 /*                  Carrousel                 */
-.carousel-padre{
+.carousel-padre {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.carousel-item{
+.carousel-item {
     height: 100%;
 }
 
 /*                  Carteles                    */
-
-.cartel{
+.cartel {
     display: flex;
     text-align: center;
     text-decoration: underline black;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--burger);
+    background: linear-gradient(to right,
+    #dcd9d1, #ffbe00);
+
+    border-radius: 5px;
 }
 
-.girado{
+.girado {
     animation-name: cartel-anim;
     animation-duration: 3s;
     animation-delay: 1s;
 }
 
-.cartel img{
+.cartel img {
     border: 1px transparent solid;
     width: 100px;
 }
@@ -90,15 +97,15 @@ body{
 /*                  ViewPort                 */
 
 @media screen and (max-width: 991px) {
-    .inicio{
+    .inicio {
         display: block;
     }
 
-    .logo-compania{
+    .logo-compania {
         display: none;
     }
 
-    nav{
+    nav {
         background-image: url(/img/Logo/Logo-nombreAcortado.png);
         background-position: top;
         background-repeat: no-repeat;
@@ -107,55 +114,50 @@ body{
     }
 }
 
-@media screen and (max-width: 480px){
-    nav{
-        background-position:top right;
+@media screen and (max-width: 480px) {
+    nav {
+        background-position: top right;
         background-size: 80%;
     }
 }
 
 /*                  Tarjetas                 */
-.card{
-    text-align:center;
+.card {
+    text-align: center;
     font-size: 1.6rem;
     color: white;
     font-weight: 500;
 
-    background-color: black;
-
-    border: 3px outset #d7b03e;
+    border: 3px outset orange;
 }
 
-.imagen-tarjeta{
+.imagen-tarjeta {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.imagen-tarjeta img{
+
+.imagen-tarjeta img {
     width: 45%;
-    filter: drop-shadow(
-        0 0 10px#d7b03e
-    );
+    filter: drop-shadow(0 0 10px#d7b03e);
 }
 
-.agrandado{
+.agrandado {
 
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0),
-        rgba(0,0,0,0.7)
-    ), url(/img/backgnd/fireGif.gif);
+    background: linear-gradient(to bottom,
+            #a5a5a5, rgb(197 202 86));
 
     animation-name: agrandar;
     animation-duration: 1s;
 }
 
-.agrandado h3{
+.agrandado h3 {
     animation-name: anim-cards;
     animation-duration: 3s;
+    color: white;
 }
 
-.achicado{
+.achicado {
     animation-name: achicar;
     animation-duration: 1s;
 
@@ -164,45 +166,53 @@ body{
 
 
 /*               Animaciones                    */
-@keyframes agrandar{
-    from{
+@keyframes agrandar {
+    from {
         transform: scale(0.1);
     }
 
-    to{
+    to {
         transform: scale(1);
     }
 }
 
-@keyframes achicar{
-    from{
+@keyframes achicar {
+    from {
         transform: scale(1.0);
     }
 
-    to{
+    to {
         transform: scale(0.1);
     }
 }
 
 
-@keyframes anim-cards{
-    0%{
+@keyframes anim-cards {
+    0% {
         transform: translate(-100px);
     }
 
-    
 
-    100%{
+
+    100% {
         transform: translate(0);
     }
 }
 
-@keyframes cartel-anim{
-    0%{
-        transform: rotate(720deg);
+@keyframes cartel-anim {
+    0% {
+        transform: translate(0);
     }
 
-    100%{
+    33%{
+        transform: translate(-25px);
+    }
+
+    66%{
+        transform: translate(25px);
+    }
+
+    100% {
         transform: rotate(0);
     }
 }
