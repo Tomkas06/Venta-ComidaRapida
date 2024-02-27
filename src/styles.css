@@ -72,14 +72,26 @@ body {
 /*                  Carteles                    */
 .cartel {
     display: flex;
-    text-align: center;
-    text-decoration: underline black;
     justify-content: space-evenly;
     align-items: center;
     background: linear-gradient(to right,
     #dcd9d1, #ffbe00);
 
     border-radius: 5px;
+}
+
+.cartel h2{
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+
+  background: linear-gradient(
+    to bottom,
+    #a1991c, #4b5046
+  );
+  background-clip: text;
+  color: transparent;
 }
 
 .girado {
@@ -106,7 +118,7 @@ body {
     }
 
     nav {
-        background-image: url(/img/Logo/Logo-nombreAcortado.png);
+        background-image: url(/src/img/Logo/Logo-nombreAcortado.png);
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -123,12 +135,7 @@ body {
 
 /*                  Tarjetas                 */
 .card {
-    text-align: center;
-    font-size: 1.6rem;
-    color: white;
-    font-weight: 500;
-
-    border: 3px outset orange;
+  border: 3px outset orange;
 }
 
 .imagen-tarjeta {
@@ -153,7 +160,20 @@ body {
 
 .agrandado h3 {
     animation: 3s anim-cards;
-    color: white;
+
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: "ADLaM Display", system-ui;
+    font-weight: 500;
+
+
+
+    background: linear-gradient(
+      to right,
+      #000000, #7ba700
+    );
+    background-clip: text;
+    color: transparent;
 }
 
 .achicado {
@@ -262,6 +282,10 @@ footer {
   footer.top {
     border-bottom: 2px solid #3a4f6a;
     padding-bottom: 20px;
+
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
   }
   footer.top img{
     width: 200px;

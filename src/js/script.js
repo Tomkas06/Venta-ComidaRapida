@@ -48,7 +48,6 @@ const cartel = document.querySelectorAll('.nombre-cartel');
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('girado'); // Agregar clase de sombra cuando está en la vista
-                    //entry.target.classList.remove('achicado'); // Quitar clase de sombra cuando sale de la vista
                 } 
                 /*
                 else {

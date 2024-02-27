@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!--            Metadatos                -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Tomás Gabriel Vecchi">
+  <meta property="og:title" content="SpeedyBite Burgers Menu">
+  <meta property="og:description" content="Menu de SpeedyBite Burgers">
+  <meta property="og:image" content="https://media.discordapp.net/attachments/951204261025427496/1212129702026940466/Logo_hamburgesa_en_circulo.png?ex=65f0b6c1&is=65de41c1&hm=ab278996ccb18ec7501b4da9bdfb71153074f1e35a2b0d7f8f62b78d48f81f32&=&format=webp&quality=lossless&width=375&height=375">
+  <meta name="keywords" content="Fastfood, comida rapida, SpeedyBite Burgers">
+
+  <!--            Titulo                -->
+  <title>SpeedyBite Burgers</title>
+  
+  <!--            Boostrap                -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!--            CSS                -->
+  <link rel="stylesheet" href="/src/styles.css">
+
+  <!--            Icono                -->
+  <link rel="shortcut icon" href="/src/img/icons/Logo hamburgesa.ico" type="image/x-icon">
+
+  <!--            Footer                -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--            Google fonts                -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Anta&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="barra-navegacion">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbarUp">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <a href="#"><img src="/src/img/icons/Logo-hamburgesa.svg" alt="Logo hamburgesa con nombre" width="50"
+                class="logo-compania"></a>
+            <h1><img src="/src/img/Logo/Logo-nombreAcortado.png" alt="Logo compañia" class="logo-compania"></h1>
+            <ul class="navbar-nav d-flex justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link inicio" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#promociones">Promociones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#hamburgesas">Hamburgesas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#HotDogs">HotDogs</a>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="btn position-relative">
+                  <img src="/src/img/icons/cart-regular-24.png" alt="Carro de compras">
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    <span class="visually-hidden">Unidades en el carro</span>
+                    0
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <aside>
+    <button class="ir-arriba" id="scrollToTopButton">
+      ↑
+    </button>
+  </aside>
+  <main>
+    <section id="promociones">
+      <div class="carousel-padre">
+        <div id="carouselPromociones" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="/src/img/Promociones/Promocion superburger.png" class="d-block w-100"
+                alt="Promocion superburger">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="/src/img/Promociones/Promocion burgerdoblecarne.png" class="d-block w-100"
+                alt="Promocion burgerdoblecarne">
+            </div>
+            <div class="carousel-item">
+              <img src="/src/img/Promociones/Promocion burgerhealtynt.png" class="d-block w-100"
+                alt="Promocion burgerhealtynt">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromociones"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselPromociones"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="hamburgesas">
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="cartel">
+            <h2 class="nombre-cartel">BURGERS</h2>
+            <img src="/src/img/hamburgesas/HamburgesaPrueba.png" alt="Hamburgesa">
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid mt-5 mb-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/hamburgesas/burger2.png" class="card-img-top" alt="Hamburgesa demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Hamburgesa ej</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/hamburgesas/burger2.png" class="card-img-top" alt="Hamburgesa demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Hamburgesa ej</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/hamburgesas/burger2.png" class="card-img-top" alt="Hamburgesa demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Hamburgesa ej</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/hamburgesas/burger2.png" class="card-img-top" alt="Hamburgesa demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Hamburgesa ej</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/hamburgesas/burger2.png" class="card-img-top" alt="Hamburgesa demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Hamburgesa ej</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/hamburgesas/burger2.png" class="card-img-top" alt="Hamburgesa demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Hamburgesa ej</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="HotDogs">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="cartel">
+            <h2 class="nombre-cartel">HOT DOGS</h2>
+            <img src="/src/img/Hot dogs/HotdogCartel.png" alt="Hotdog">
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid mt-5 mb-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/Hot dogs/HotDog-tarjeta.png" class="card-img-top" alt="HotDog demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">HotDog ej</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/Hot dogs/HotDog-tarjeta.png" class="card-img-top" alt="HotDog demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">HotDog ej</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/Hot dogs/HotDog-tarjeta.png" class="card-img-top" alt="HotDog demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">HotDog ej</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/Hot dogs/HotDog-tarjeta.png" class="card-img-top" alt="HotDog demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">HotDog ej</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/Hot dogs/HotDog-tarjeta.png" class="card-img-top" alt="HotDog demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">HotDog ej</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card achicado h-100">
+              <div class="imagen-tarjeta">
+                <img src="/src/img/Hot dogs/HotDog-tarjeta.png" class="card-img-top" alt="HotDog demostracion">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">HotDog ej</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="sec-footer">
+    <footer class="top">
+      <img src="/src/img/Logo/Logo hamburgesa en circulo.png" />
+      <div class="links">
+        <div>
+          <h2>Platform</h2>
+          <a>Directus Core</a>
+          <a>Open Data Platform</a>
+          <a>Feature List</a>
+          <a>Road Map</a>
+          <a>Marketplace</a>
+        </div>
+      </div>
+    </footer>
+    <footer class="bottom">
+      <div class="legal">
+        <span> © 2023 All rights reserved </span>
+        <a> License </a>
+        <a> Terms </a>
+        <a> Privacy </a>
+      </div>
+      <div class="links">
+        <a class="fa-brands fa-github"></a>
+        <a class="fa-brands fa-linkedin"></a>
+        <a class="fa-brands fa-docker"></a>
+      </div>
+    </footer>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="/src/js/script.js"></script>
+</body>
+
+</html>
