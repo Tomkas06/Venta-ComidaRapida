@@ -50,7 +50,7 @@ body {
 }
 
 .navbar-collapse {
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
 }
 
@@ -110,27 +110,22 @@ body {
 
 @media screen and (max-width: 991px) {
     .inicio {
-        display: block;
+      display: block;
     }
-
-    .logo-compania {
-        display: none;
-    }
-
-    nav {
-        background-image: url(/src/img/Logo/Logo-nombreAcortado.png);
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-size: 45%;
+    .logo-compania{
+      display: none;
     }
 }
 
-@media screen and (max-width: 480px) {
-    nav {
-        background-position: top right;
-        background-size: 80%;
-    }
+@media screen and (max-width: 450px) {
+  .texto-compania{
+    width: 75%;
+  }
+
+  .texto-compania img{
+    width: 100%;
+  }
+    
 }
 
 /*                  Tarjetas                 */
