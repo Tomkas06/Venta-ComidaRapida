@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Signup Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/src/styles.css">
+    </head>
+    <body>
+            <div class="login-side">
+                <div class="my-form__wrapper">
+                    <div class="login-welcome-row">
+                        <h1>Bienvenido</h1>
+                        <p>Registre su cuenta</p>
+                    </div>
+
+                    <form class="my-form">                    
+                        <div class="text-field">
+                            <label for="email">Email:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Email"
+                                required
+                            >
+                            <img
+                                alt="Email Icon"
+                                title="Email Icon"
+                                src="/src/img/icons/email.svg"
+                            >
+                        </div>
+                        <div class="text-field">
+                            <label for="password">Contraseña:</label>
+                            <input
+                                id="password"
+                                type="password"
+                                name="password"
+                                placeholder="Your Password"
+                                title="Minimum 6 characters at 
+                                    least 1 Alphabet and 1 Number"
+                                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+                                required
+                            >
+                            <img
+                                alt="Password Icon"
+                                title="Password Icon"
+                                src="/src/img/icons/password.svg"
+                            >
+                        </div>
+                        <div class="text-field">
+                            <label for="password2">Contraseña:</label>
+                            <input
+                                id="password2"
+                                type="password"
+                                name="password2"
+                                placeholder="Your Password"
+                                required
+                            >
+                            <img
+                                alt="Password Icon"
+                                title="Password Icon"
+                                src="/src/img/icons/password.svg"
+                            >
+                        </div>
+                        <input type="submit" class="my-form__button" value="Registrarse">
+                        <div class="my-form__actions">
+                            <div class="my-form__signup">
+                                <a href="#" title="Create Account">
+                                    Iniciar sesion
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </body>
+</html>
+

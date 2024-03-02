@@ -1,16 +1,19 @@
 /****************************************************************************************************************
                                           Principales
 ****************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 :root {
-    --primary: #DD946F;
-    --secondary: #261E5A;
     --burger: #d7b03e;
+    --color: rgba(114, 114, 114, 0.3);
+    --primary: #4978F0;
+    --primary-light: #E1EEF5;
+    --secondary: #1D1D1D;
+    --background: #F4F1FF;
+    --text: #1F2346;
 }
 
 body {
-    width: 100%;
     height: 100%;
-    --color: rgba(114, 114, 114, 0.3);
     background-color: #191a1a;
     background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
         linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
@@ -127,6 +130,11 @@ body {
     .logo-compania{
       display: none;
     }
+
+    .contenedor-imagen{
+      width: 70% !important;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -165,6 +173,8 @@ body {
     );
     animation-name: agrandar;
     animation-duration: 1s;
+
+    cursor: pointer;
 }
 
 .agrandado h3 {
@@ -371,9 +381,6 @@ div.links{
     }
 }
 
-
-
-
 /****************************************************************************************************************
                                           Clases pagina detalle
 ****************************************************************************************************************/
@@ -390,7 +397,7 @@ div.links{
 }
 
 .contenedor-imagen{
-  width: 80%;
+  width: 40%;
 }
 .contenedor-imagen img{
   width: 100%;
@@ -417,12 +424,205 @@ div.links{
 
 .contenedor-textos p{
   font-family: "ADLaM Display", system-ui;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: x-large;
 
   background: linear-gradient(
       to bottom right,
-      #a9aaa3, #ffffff
+      #b6bf84, #ffffff
     );
     background-clip: text;
     color: transparent;
+}
+
+/****************************************************************************************************************
+                                          Clases pagina login-signup
+****************************************************************************************************************/
+.login-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: mulish;
+}
+
+.info-side {
+  height: 100vh;
+  padding: 84px 48px 48px 32px;
+  color: #401B3D;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--background);
+}
+
+.info-side h2 {
+  margin-top: 48px;
+  color: var(--text);
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.info-side p {
+  font-size: 1.2rem;
+}
+
+.info-side img {
+  max-width: 860px;
+}
+
+.welcome-message {
+  max-width: 360px;
+}
+
+.logo {
+  height: 200px;
+}
+
+.my-form__wrapper {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: 460px;
+  
+  width: 100%;
+  
+  padding: 30px 8px;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 
+      rgba(100, 100, 111, 0.2)
+      0px 7px 29px 0px;
+
+}
+
+.my-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: relative;
+  gap: 16px;
+}
+
+.login-welcome {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.login-welcome-row {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.my-form__button {
+  background-color: var(--primary);
+  color: white;
+  white-space: nowrap;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  line-height: 50px;
+  outline: none;
+  font-size: 18px;
+  letter-spacing: .025em;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 800;
+  min-height: 50px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.15);
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+
+.my-form__actions {
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary);
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.my-form__actions a {
+  color: var(--secondary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.my-form__actions a:hover {
+  text-decoration: underline;
+}
+
+.my-form__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-form__signup {
+  display: flex;
+  justify-content: center;
+}
+
+.my-form__signup a {
+  color: var(--primary);
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.my-form__signup a:hover {
+  text-decoration: underline;
+}
+
+.text-field input {
+  color: var(--secondary);
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid var(--secondary);
+  height: 50px;
+  letter-spacing: .03rem;
+  background-color: transparent;
+  outline: none;
+  transition: .25s;
+  border-radius: 8px;
+  text-indent: 20px;
+  margin-top: 8px;
+}
+
+.text-field {
+  position: relative;
+}
+
+.text-field img {
+  position: absolute;
+  right: -2px;
+  bottom: -4px;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%,-50%);
+  transform-origin: center;
+}
+
+.text-field input:focus {
+  border: 1px solid var(--primary);
+}
+
+.text-field label {
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .03rem;
+  z-index: 10;
 }
