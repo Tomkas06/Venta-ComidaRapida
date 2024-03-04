@@ -33,55 +33,55 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Anta&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <div class="barra-navegacion">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbarUp">
-        <div class="container-fluid">
-          <h1 class="texto-compania"><img src="/src/img/Logo/Logo-nombreAcortado.png" alt="Logo compañia"></h1>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav d-flex justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link inicio" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#promociones">Promociones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#hamburgesas">Hamburgesas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#HotDogs">HotDogs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/templates/login.html">Iniciar sesion</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/templates/signup.html">Registrarse</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link">Cerrar sesion</a>
-              </li>
-              <li class="nav-item">
-                <button type="button" class="btn position-relative">
-                  <img src="/src/img/icons/cart-regular-24.png" alt="Carro de compras">
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    <span class="visually-hidden">Unidades en el carro</span>
-                    0
-                  </span>
-                </button>
-              </li>
-            </ul>
-          </div>
+    <nav id="navbarUp">
+      <div class="background">
+        <div class="menu__wrapper">
+            <div class="menu__bar">
+                <a href="#" title="Logo" class="logo">
+                    <svg width="1103" height="996" viewBox="0 0 1103 996" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M410.988 255.56L0 995.337H189.802L505.141 427.427L410.988 255.56ZM1102.94 995.337L647.119 170.373L551.471 0L457.317 170.373L551.471 340.746L711.79 629.718H498.683L405.461 786.972H799.034L914.634 995.337H1102.94Z"
+                            fill="#FAFBFC" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M410.988 255.56L0 995.337H189.802L505.141 427.427L410.988 255.56ZM1102.94 995.337L647.119 170.373L551.471 0L457.317 170.373L551.471 340.746L711.79 629.718H498.683L405.461 786.972H799.034L914.634 995.337H1102.94Z"
+                            fill="#FAFBFC" />
+                    </svg>
+
+                </a>
+                <img class="menu-icon" src="/src/img/icons/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
+                    onclick="toggleMenu(this)">
+                <ul class="navigation">
+                    <li>
+                        <a href="#services" title="Services">
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#blog" title="Blog">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" title="About">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact-us" title="Contact Us">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
   <aside>
