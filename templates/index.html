@@ -19,7 +19,8 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <!--            CSS                -->
-  <link rel="stylesheet" href="/src/styles.css">
+  <link rel="stylesheet" href="/src/styles/styleGeneral.css">
+  <link rel="stylesheet" href="/src/styles/styleIndex.css">
 
   <!--            Icono                -->
   <link rel="shortcut icon" href="/src/img/icons/Logo hamburgesa.ico" type="image/x-icon">
@@ -43,39 +44,45 @@
         <div class="menu__wrapper">
             <div class="menu__bar">
                 <a href="#" title="Logo" class="logo">
-                    <svg width="1103" height="996" viewBox="0 0 1103 996" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M410.988 255.56L0 995.337H189.802L505.141 427.427L410.988 255.56ZM1102.94 995.337L647.119 170.373L551.471 0L457.317 170.373L551.471 340.746L711.79 629.718H498.683L405.461 786.972H799.034L914.634 995.337H1102.94Z"
-                            fill="#FAFBFC" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M410.988 255.56L0 995.337H189.802L505.141 427.427L410.988 255.56ZM1102.94 995.337L647.119 170.373L551.471 0L457.317 170.373L551.471 340.746L711.79 629.718H498.683L405.461 786.972H799.034L914.634 995.337H1102.94Z"
-                            fill="#FAFBFC" />
-                    </svg>
-
+                  <img src="/src/img/icons/Logo-hamburgesa.svg" alt="Logo SpeedyBite Burgers">
                 </a>
                 <img class="menu-icon" src="/src/img/icons/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
                     onclick="toggleMenu(this)">
                 <ul class="navigation">
                     <li>
-                        <a href="#services" title="Services">
-                            Services
+                        <a href="#promociones" title="Promociones">
+                          Promociones
                         </a>
                     </li>
                     <li>
-                        <a href="#blog" title="Blog">
-                            Blog
+                        <a href="#hamburgesas" title="Hamburguesas">
+                          Hamburguesas
                         </a>
                     </li>
                     <li>
-                        <a href="#about" title="About">
-                            About
+                        <a href="#HotDogs" title="HotDogs">
+                          HotDogs
                         </a>
                     </li>
                     <li>
-                        <a href="#contact-us" title="Contact Us">
-                            Contact Us
-                        </a>
+                      <button type="button" class="btn btn-transparent position-relative" data-bs-toggle="offcanvas"
+                        data-bs-target="#canvasCarrito" aria-controls="offcanvasRight">
+                        <img src="/src/img/icons/cart-regular-24.png" alt="Unidades en el carro">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          1
+                          <span class="visually-hidden">Unidades en el carrito</span>
+                        </span>
+                      </button>
+                      <div class="offcanvas offcanvas-end" tabindex="-1" id="canvasCarrito" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasRightLabel">Unidades en el carro</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quae sequi, sint blanditiis nisi, error beatae
+                          sed totam doloremque non est! Animi ut eaque doloremque. Eos facilis veritatis hic nisi!
+                        </div>
+                      </div>
                     </li>
                 </ul>
             </div>
@@ -89,6 +96,7 @@
       ↑
     </button>
   </aside>
+
   <main>
     <section id="promociones">
       <div class="carousel-padre">
@@ -135,13 +143,41 @@
       <div class="container-fluid mt-5 mb-5">
         <div class="row row-cols-1 row-cols-md-3 g-4">
 
-          <div class="col" onclick="location.href = '/templates/detalle.html'">
+          <div class="col">
             <div class="card achicado h-100">
               <div class="imagen-tarjeta">
                 <img src="/src/img/hamburgesas/burger2.png" class="card-img-top" alt="Hamburgesa demostracion">
               </div>
               <div class="card-body">
                 <h3 class="card-title">Hamburgesa ej</h3>
+                <div class="boton-canvas">
+
+                  <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBurger1"
+                    aria-controls="staticBackdrop">
+                    Mas informacion
+                  </button>
+                
+                  <div class="offcanvas offcanvas-end canvas-tarjeta" data-bs-backdrop="static" tabindex="-1" id="offcanvasBurger1"
+                    aria-labelledby="staticBackdropLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="staticBackdropLabel">Hamburguesa ej</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ex delectus, fugiat vel saepe dignissimos laborum praesentium, reiciendis modi velit voluptates incidunt maiores nam id quod amet molestiae accusantium expedita?
+                      </div>
+
+                      <div class="d-flex justify-content-center align-items-center mt-4">
+                        <div class="btn-group" role="group" aria-label="Basic outlined">
+                          <button type="button" class="btn btn-outline-primary"><</button>
+                          <button class="btn btn-outline-primary sumadores">1</button>
+                          <button type="button" class="btn btn-outline-primary">></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,0 +1,178 @@
+:root {
+    --burger: #d7b03e;
+    --color: rgba(114, 114, 114, 0.3);
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+    --primary: #F4BD50;
+    --background: #191919;
+    --navbar-height: 48px;
+}
+/****************************************************************************************************************
+                                          Carrousel
+****************************************************************************************************************/
+.carousel-padre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 74px;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+/****************************************************************************************************************
+                                          Carteles
+****************************************************************************************************************/
+.cartel {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to right,
+    #dcd9d1, #ffbe00);
+
+    border-radius: 5px;
+}
+
+.cartel h2{
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+
+  background: linear-gradient(
+    to bottom,
+    #a1991c, #4b5046
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.girado {
+    animation-name: cartel-anim;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.cartel img {
+    border: 1px transparent solid;
+    width: 100px;
+}
+
+/****************************************************************************************************************
+                                          Tarjetas
+****************************************************************************************************************/
+.boton-canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-tarjeta{
+    background-color: #f2fbd3;
+    opacity: 0.7;
+}
+
+.card {
+    border: 3px outset orange;
+  }
+  
+  .imagen-tarjeta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .imagen-tarjeta img {
+      width: 45%;
+      filter: drop-shadow(0 0 10px#d7b03e);
+  }
+  
+  .agrandado {
+  
+      background: linear-gradient(to bottom,
+          #a5a5a5, rgb(197 202 86)
+      );
+      animation-name: agrandar;
+      animation-duration: 1s;
+  }
+  
+  .agrandado h3 {
+      animation: 3s anim-cards;
+  
+      text-align: center;
+      font-size: 1.6rem;
+      font-family: "ADLaM Display", system-ui;
+      font-weight: 500;
+  
+  
+  
+      background: linear-gradient(
+        to right,
+        #000000, #7ba700
+      );
+      background-clip: text;
+      color: transparent;
+  }
+  
+  .achicado {
+      animation-name: achicar;
+      animation-duration: 1s;
+  
+      transform: scale(0.1);
+  }
+  
+  
+  /****************************************************************************************************************
+                                            Animaciones
+  ****************************************************************************************************************/
+  @keyframes agrandar {
+      from {
+          transform: scale(0.1);
+      }
+  
+      to {
+          transform: scale(1);
+      }
+  }
+  
+  @keyframes achicar {
+      from {
+          transform: scale(1.0);
+      }
+  
+      to {
+          transform: scale(0.1);
+      }
+  }
+  
+  
+  @keyframes anim-cards {
+      from {
+          transform: translate(-70px);
+      }
+  
+  
+  
+      to {
+          transform: translate(0);
+      }
+  }
+  
+  @keyframes cartel-anim {
+      0% {
+          transform: translate(0);
+      }
+  
+      33%{
+          transform: translate(-25px);
+      }
+  
+      66%{
+          transform: translate(25px);
+      }
+  
+      100% {
+          transform: rotate(0);
+      }
+  }
