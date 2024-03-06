@@ -24,15 +24,9 @@ const cards = document.querySelectorAll('.card');
         const observerCard = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('agrandado'); // Agregar clase de sombra cuando está en la vista
-                    entry.target.classList.remove('achicado'); // Quitar clase de sombra cuando sale de la vista
+                    entry.target.classList.add('agrandado'); 
+                    entry.target.classList.remove('achicado');
                 } 
-                /*
-                else {
-                    entry.target.classList.add('achicado'); // Agregar clase de sombra cuando está en la vista
-                    entry.target.classList.remove('agrandado'); // Quitar clase de sombra cuando sale de la vista
-                }
-                */
             });
         }, { threshold: 0.5 });
 
@@ -47,14 +41,8 @@ const cartel = document.querySelectorAll('.nombre-cartel');
         const observerCartel = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('girado'); // Agregar clase de sombra cuando está en la vista
+                    entry.target.classList.add('girado'); 
                 } 
-                /*
-                else {
-                    entry.target.classList.add('achicado'); // Agregar clase de sombra cuando está en la vista
-                    entry.target.classList.remove('agrandado'); // Quitar clase de sombra cuando sale de la vista
-                }
-                */
             });
         }, { threshold: 0.5 });
 
@@ -62,27 +50,9 @@ const cartel = document.querySelectorAll('.nombre-cartel');
             observerCartel.observe(card);
         });
 
-
-//sexo
-
-const toggleMenu = () => {
-  const navigation = document.querySelector(".navigation");
-
-  const burgerMenu = document.querySelector(".menu-icon");
-  const src = burgerMenu.getAttribute("src");
-
-  const isBurger = src === "/src/img/icons/burger-menu.svg";
-  const iconName = isBurger ? "/src/img/icons/close.svg" : "/src/img/icons/burger-menu.svg";
-
-  burgerMenu.setAttribute("src", iconName);
-
-  if (!isBurger) {
-    navigation.classList.add("navigation--mobile--fadeout");
-    setTimeout(() => {
-      navigation.classList.toggle("navigation--mobile");
-    }, 300);
-  } else {
-    navigation.classList.remove("navigation--mobile--fadeout");
-    navigation.classList.toggle("navigation--mobile");
-  }
-};
+/*
+                else {
+                    entry.target.classList.add('achicado'); // Agregar clase de sombra cuando está en la vista
+                    entry.target.classList.remove('agrandado'); // Quitar clase de sombra cuando sale de la vista
+                }
+                */

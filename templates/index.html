@@ -36,56 +36,45 @@
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Anta&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
-    <nav id="navbarUp">
-      <div class="background">
-        <div class="menu__wrapper">
-            <div class="menu__bar">
-                <a href="#" title="Logo" class="logo">
-                  <img src="/src/img/icons/Logo-hamburgesa.svg" alt="Logo SpeedyBite Burgers">
-                </a>
-                <img class="menu-icon" src="/src/img/icons/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
-                    onclick="toggleMenu(this)">
-                <ul class="navigation">
-                    <li>
-                        <a href="#promociones" title="Promociones">
-                          Promociones
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#hamburgesas" title="Hamburguesas">
-                          Hamburguesas
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#HotDogs" title="HotDogs">
-                          HotDogs
-                        </a>
-                    </li>
-                    <li>
-                      <button type="button" class="btn btn-transparent position-relative" data-bs-toggle="offcanvas"
-                        data-bs-target="#canvasCarrito" aria-controls="offcanvasRight">
-                        <img src="/src/img/icons/cart-regular-24.png" alt="Unidades en el carro">
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                          1
-                          <span class="visually-hidden">Unidades en el carrito</span>
-                        </span>
-                      </button>
-                      <div class="offcanvas offcanvas-end" tabindex="-1" id="canvasCarrito" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                          <h5 class="offcanvas-title" id="offcanvasRightLabel">Unidades en el carro</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quae sequi, sint blanditiis nisi, error beatae
-                          sed totam doloremque non est! Animi ut eaque doloremque. Eos facilis veritatis hic nisi!
-                        </div>
-                      </div>
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar fixed-top bg-dark border-bottom border-body" data-bs-theme="dark" id="navbarUp">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="#"><img src="/src/img/icons/Logo-hamburgesa.svg" alt=""></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="navbar" aria-labelledby="navbarLabel">
+          <div class="offcanvas-header">
+
+            <h5 class="offcanvas-title" id="navbarLabel">Ir hacia...</h5>
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#promociones">Promociones</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#hamburgesas">Hamburguesas</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#HotDogs">HotDogs</a>
+              </li>
+
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -98,7 +87,7 @@
   </aside>
 
   <main>
-    <section id="promociones">
+    <section id="promociones" class="mt-5">
       <div class="carousel-padre">
         <div id="carouselPromociones" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -130,7 +119,6 @@
     </section>
 
     <section id="hamburgesas">
-
       <div class="container mt-5">
         <div class="row">
           <div class="cartel">
