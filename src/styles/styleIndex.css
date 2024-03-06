@@ -66,6 +66,27 @@ html{
 /****************************************************************************************************************
                                           Tarjetas
 ****************************************************************************************************************/
+.row{
+    gap: 20px;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 30px;
+    border: 3px outset orange;
+}
+.card-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-image figure img{
+    width: 100px;
+    filter: drop-shadow(0 0 10px#d7b03e);
+}
+
 .boton-canvas{
     display: flex;
     justify-content: center;
@@ -77,59 +98,41 @@ html{
     opacity: 0.7;
 }
 
-.card {
-    border: 3px outset orange;
-  }
+.agrandado {
   
-  .imagen-tarjeta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  
-  .imagen-tarjeta img {
-      width: 45%;
-      filter: drop-shadow(0 0 10px#d7b03e);
-  }
-  
-  .agrandado {
-  
-      background: linear-gradient(to bottom,
-          #a5a5a5, rgb(197 202 86)
-      );
-      animation-name: agrandar;
-      animation-duration: 1s;
-  }
-  
-  .agrandado h3 {
-      animation: 3s anim-cards;
-  
-      text-align: center;
-      font-size: 1.6rem;
-      font-family: "ADLaM Display", system-ui;
-      font-weight: 500;
-  
-  
-  
-      background: linear-gradient(
-        to right,
-        #000000, #7ba700
-      );
-      background-clip: text;
-      color: transparent;
-  }
-  
-  .achicado {
-      animation-name: achicar;
-      animation-duration: 1s;
-  
-      transform: scale(0.1);
-  }
-  
-  
-  /****************************************************************************************************************
+    background: linear-gradient(to bottom,
+        #a5a5a5, rgb(197 202 86)
+    );
+    animation-name: agrandar;
+    animation-duration: 1s;
+}
+
+.agrandado h3 {
+    animation: 3s anim-cards;
+
+    text-align: center;
+    font-family: "ADLaM Display", system-ui;
+    font-weight: 500;
+
+
+
+    background: linear-gradient(
+      to right,
+      #000000, #28330a
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+.achicado {
+    animation-name: achicar;
+    animation-duration: 1s;
+
+    transform: scale(0.1);
+}  
+/****************************************************************************************************************
                                             Animaciones
-  ****************************************************************************************************************/
+****************************************************************************************************************/
   @keyframes agrandar {
       from {
           transform: scale(0.1);
